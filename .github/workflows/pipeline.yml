@@ -56,7 +56,7 @@ jobs:
 
       - name: Tag and push image
         run: |
-          IMAGE=$(echo "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}" | tr '[:upper]' '[:lower]')  
+          IMAGE=$(echo "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}" | tr '[:upper:]' '[:lower:]')  
           docker tag local-build:${{ github.sha }} $IMAGE:${{ github.sha }}
           docker tag local-build:${{ github.sha }} $IMAGE:latest
           docker push $IMAGE:${{ github.sha }}
