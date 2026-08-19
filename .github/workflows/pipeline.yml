@@ -34,7 +34,7 @@ jobs:
       packages: write
     steps:
       - name: checkout code
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Build Docker image
         run: docker build -t local-build:${{ github.sha }} .
