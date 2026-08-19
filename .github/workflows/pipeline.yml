@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        users: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: set up python
         uses: actions/setup-python@v5
@@ -29,7 +29,7 @@ jobs:
   build: 
     needs: test
     runs-on: ubuntu-latest
-    premission: 
+    permission: 
       contents: read
       packages: write
     steps:
