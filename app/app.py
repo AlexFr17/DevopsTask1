@@ -31,7 +31,7 @@ def record_metrics(response):
 def index():
     return jsonify({
         "message": "Hello from my DevOps platform",
-        "version": "1.0.0",
+        "version": os.environ.get("APP_VERSION", "1.0.0"), 
         "hostname": socket.gethostname(),
     })
 
