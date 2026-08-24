@@ -38,7 +38,7 @@ def index():
 
 @app.route("/health")
 def health():
-    return jsonify({"status": "healthy"}), 200
+    return jsonify({"status1": "healthy"}), 200
 
 @app.route("/metrics")
 def metrics():
