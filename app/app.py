@@ -6,6 +6,8 @@ import time
 
 app = Flask(__name__)
 
+FEATURE_TOGGLE = os.environ["FEATURE_TOGGLE"]  # no default — crashes if missing
+
 REQUEST_COUNT = Counter(
     "http_requests_total", "Total HTTP requests", ["method", "endpoint", "status"]
 )
