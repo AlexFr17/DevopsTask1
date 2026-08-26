@@ -11,6 +11,8 @@ env:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      FEATURE_TOGGLE: "true"
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
